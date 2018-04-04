@@ -39,6 +39,8 @@ namespace ProductApps
                 double shipPay = 25;
                 double totalPlusShip = totalPay + shipPay;
                 totalChargeTextBlock.Text = Convert.ToString(totalPlusShip);
+                double totalPlusShipPlusWrap = totalPlusShip + 5;
+                totalChargeWithWrapTextBlock.Text = Convert.ToString(totalPlusShipPlusWrap);
             }
             catch (FormatException)
             {
@@ -53,6 +55,7 @@ namespace ProductApps
             quantityTextBox.Text = "";
             totalPaymentTextBlock.Text = "";
             totalChargeTextBlock.Text = "";
+            totalChargeWithWrapTextBlock.Text = "";
 
         }
 

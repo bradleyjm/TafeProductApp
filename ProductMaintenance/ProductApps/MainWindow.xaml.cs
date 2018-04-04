@@ -41,6 +41,8 @@ namespace ProductApps
                 totalChargeTextBlock.Text = Convert.ToString(totalPlusShip);
                 double totalPlusShipPlusWrap = totalPlusShip + 5;
                 totalChargeWithWrapTextBlock.Text = Convert.ToString(totalPlusShipPlusWrap);
+                double totalPlusShipPlusWrapPlusGST = totalPlusShipPlusWrap * 1.1;
+                totalChargeAfterGST.Text = Convert.ToString(totalPlusShipPlusWrapPlusGST);
             }
             catch (FormatException)
             {
@@ -56,7 +58,7 @@ namespace ProductApps
             totalPaymentTextBlock.Text = "";
             totalChargeTextBlock.Text = "";
             totalChargeWithWrapTextBlock.Text = "";
-
+            totalChargeAfterGST.Text = "";
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
